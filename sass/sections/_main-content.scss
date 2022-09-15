@@ -1,0 +1,104 @@
+
+/*---НАШІ КЛІЄНТИ--------------------*/
+
+.section.basics,
+.section.work {
+  background-color: #ffffff;
+}
+.brands{
+  background-color: #FFFFFF;
+}
+.brand-item-link{
+  display: flex;
+  width:170px;
+  height:92px;
+  outline: 1px solid #AFB1B8;
+  border-radius: 1px;
+  justify-content: center;
+  align-items: center;
+  transition: outline 250ms var(--timing-function);
+}
+.brand-item:not(:last-child){
+margin-right: 30px;
+}
+.brand-icon{
+  fill: #AFB1B8;
+  transition:  fill 250ms var(--timing-function);
+}
+.brand-item-link:hover,
+.brand-item-link:focus {
+  outline: 1px solid var(--accent-color);
+}
+
+.brand-item-link:hover .brand-icon,
+.brand-item-link:focus .brand-icon{
+  fill: var(--accent-color);
+}
+
+
+/*-------------------*////
+
+.project-item{
+    position: relative;
+    background-color: #ffffff;
+  }
+  .project-item:not(last-child){
+    margin-right: 30px;
+  }
+  .text-box{
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    top: 224px;
+  }
+  .text-box-text{
+    font-family: Roboto;
+    font-weight:700;
+    font-size: 16px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    
+  }
+  
+  /*---НАША КОМАНДА--------------------------------*/
+  
+  .img-item:not(last-child) {
+    margin-right: 30px;
+  }
+  .img-item {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16)
+  }
+  .team-description {
+  padding-top: 30px;
+  margin: 0;
+  }
+  .team {
+    background-color: #f5f4fa;
+  }
+  .team-name {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: var(--title-text-color);
+  }
+  
+  .list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .team-text {
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+  }
