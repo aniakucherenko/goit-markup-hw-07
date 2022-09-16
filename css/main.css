@@ -411,7 +411,7 @@ img {
   padding: 12px;
   transition: fill 250ms var(--timing-function);
 }
-.socials__icon .socials__link:hover, .socials__link:focus .socials__icon {
+.socials__link:hover .socials__icon, .socials__link:focus .socials__icon {
   fill: white;
 }
 

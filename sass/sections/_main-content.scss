@@ -144,7 +144,7 @@ background-color: #ffffff;
     fill: #AFB1B8; 
     padding: 12px;
     transition: fill 250ms var(--timing-function);
-  .socials__link:hover,
+  .socials__link:hover &,
   .socials__link:focus & {
       fill: white;
     }}
