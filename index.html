@@ -416,70 +416,69 @@
 <!---MODAL---------------------------------------------------->
         <div class="backdrop is-hidden" data-modal>
 <div class="modal">
-<button class="button-close" data-modal-close>
-    <svg class="modal-icon-close" width="20" height="20">
-        <use class="modal-close" 
-        href="./images/symbol-defs.svg#close-icon"
+<button class="modal__button-close" data-modal-close>
+    <svg class="modal__icon-close" width="20" height="20">
+        <use href="./images/symbol-defs.svg#close-icon"
         width="11" height ="11">
         </use>
     </svg>
 </button>
-<p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-<form class="modal-form">
+<p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
+<form class="modal__form">
     <ul>
-    <li class="modal-field">
-        <label for ="user-name" class="modal-label" >Ім'я</label>
-      <div class="input-wrap">
+    <li class="modal__field">
+        <label for ="user-name" class="modal__label" >Ім'я</label>
+      <div class="modal__wrap">
             <input 
             type="text" 
             name="user-name" 
-            class="modal-input"
+            class="modal__input"
             id="user-name"
             minlength="2"
             required
             />
-            <svg class="modal-icon" width="12" height="12">
+            <svg class="modal__icon" width="12" height="12">
                 <use href="./images/symbol-defs.svg#user"></use>
             </svg>
       </div>
     </li>
-    <li class="modal-field">
-        <label for ="user-phone" class="modal-label" >Телефон</label>
-      <div class="input-wrap">
+    <li class="modal__field">
+        <label for ="user-phone" class="modal__label" >Телефон</label>
+      <div class="modal__wrap">
             <input 
             type="tel" 
             name="user-phone" 
-            class="modal-input"
+            class="modal__input"
             id="user-phone"
             required
             pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
             />
-            <svg class="modal-icon" width="13" height="13">
+            <svg class="modal__icon" width="13" height="13">
                 <use href="./images/symbol-defs.svg#phone-2"></use>
             </svg>
       </div>
     </li>
-    <li class="modal-field">
-        <label for ="user-mail" class="modal-label" >Пошта</label>
-      <div class="input-wrap">
+    <li class="modal__field">
+        <label for ="user-mail" class="modal__label" >Пошта</label>
+      <div class="modal__wrap">
             <input 
             type="mail" 
             name="user-mail" 
-            class="modal-input"
+            class="modal__input"
             id="user-mail"
             required
             />
-            <svg class="modal-icon" width="15" height="12">
+            <svg class="modal__icon" width="15" height="12">
                 <use href="./images/symbol-defs.svg#mail-2"></use>
             </svg>
       </div>
     </li>
 </ul>
-    <label for ="user-text" class="modal-label" >Коментар</label>
+    <label for ="user-text" class="modal__label" >Коментар</label>
     <textarea 
     type="text" 
     name="user-text" 
-    class="modal-text"
+    class="modal__text"
     id="user-text"
     placeholder="Введіть текст"
     required
@@ -488,21 +487,21 @@
     <input type="checkbox"
      name="privacy" 
      id="privacy"  
-     class="modal-checkbox visually-hidden" 
+     class="privacy__checkbox visually-hidden" 
      value="true"
      />
 <label for="privacy" 
-class="check-text">
+class="privacy">
     <span>
-        <svg class="check-icon" width="16" height="15">
+        <svg class="privacy__icon" width="16" height="15">
             <use href="./images/symbol-defs.svg#checker"></use>
         </svg>
     </span>
-   <p class="privacy-text">Погоджуюсь з розсилкою та приймаю 
-    <a href=""class="privacy-doc">Умови договору</a></p>
+   <p class="privacy__text">Погоджуюсь з розсилкою та приймаю 
+    <a href=""class="privacy__doc">Умови договору</a></p>
 </label>
 
-    <button type="submit" class="button-send" >Відправити</button>
+    <button type="submit" class="privacy__button" >Відправити</button>
 </form>
 </div>
   </div>
