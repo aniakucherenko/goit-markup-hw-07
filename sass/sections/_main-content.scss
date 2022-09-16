@@ -50,11 +50,9 @@ background-color: #ffffff;
 .specialization__item{
     position: relative;
     background-color: #ffffff;
-  }
-
-.specialization__item:not(last-child){
+    &:not(last-child){
     margin-right: 30px;
-  }
+  }}
 
 .specialization__wrap{
     position: absolute;
@@ -142,17 +140,14 @@ background-color: #ffffff;
         background-color: var(--accent-color);
       }}
 
-  .socials__link:hover .socials__icon,
-  .socials__link:focus .socials__icon{
-     fill: white;
-    }
-  
-
   .socials__icon{
     fill: #AFB1B8; 
     padding: 12px;
     transition: fill 250ms var(--timing-function);
-    }
+  .socials__link:hover,
+  .socials__link:focus & {
+      fill: white;
+    }}
 
     /*---ПОСТІЙНІ КЛІЄНТИ-----------------------------------------*/
 
@@ -177,13 +172,11 @@ background-color: #ffffff;
   outline: 1px solid var(--accent-color);
 }}
 
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon{
-  fill: var(--accent-color);
-}
-
 .clients__icon{
   fill: #AFB1B8;
   transition:  fill 250ms var(--timing-function);
-}
+.clients__link:hover &,
+.clients__link:focus & {
+  fill: var(--accent-color)
+}}
 

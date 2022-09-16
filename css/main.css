@@ -168,8 +168,12 @@ img {
   transition: background-color 250ms var(--timing-function);
   border-radius: 10px;
 }
-.navigation__link:hover::after,
-.navigation__link .current::after {
+.navigation__link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.current::after {
   width: 100%;
   opacity: 1;
 }
@@ -314,7 +318,6 @@ img {
   position: relative;
   background-color: #ffffff;
 }
-
 .specialization__item:not(last-child) {
   margin-right: 30px;
 }
@@ -403,15 +406,13 @@ img {
   background-color: var(--accent-color);
 }
 
-.socials__link:hover .socials__icon,
-.socials__link:focus .socials__icon {
-  fill: white;
-}
-
 .socials__icon {
   fill: #AFB1B8;
   padding: 12px;
   transition: fill 250ms var(--timing-function);
+}
+.socials__icon .socials__link:hover, .socials__link:focus .socials__icon {
+  fill: white;
 }
 
 /*---ПОСТІЙНІ КЛІЄНТИ-----------------------------------------*/
@@ -437,14 +438,12 @@ img {
   outline: 1px solid var(--accent-color);
 }
 
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon {
-  fill: var(--accent-color);
-}
-
 .clients__icon {
   fill: #AFB1B8;
   transition: fill 250ms var(--timing-function);
+}
+.clients__link:hover .clients__icon, .clients__link:focus .clients__icon {
+  fill: var(--accent-color);
 }
 
 .portfolio {
@@ -601,8 +600,15 @@ img {
   display: block;
 }
 
-.social__link:hover,
-.social__link:focus {
+.social__link {
+  width: 44px;
+  height: 44px;
+  background-color: #43444D;
+  border-radius: 50%;
+  padding: 12px;
+  transition: background-color 250ms var(--timing-function);
+}
+.social__link:hover, .social__link:focus {
   color: var(--accent-color);
 }
 
@@ -612,19 +618,13 @@ img {
   text-decoration: none;
   transition: 250ms var(--timing-function);
 }
-
-.address {
-  color: var(--primary-text-color);
-}
-
-.contacts:hover,
-.contacts:focus {
+.contacts:hover, .contacts:focus {
   color: var(--accent-color);
 }
 
 .address {
   font-style: normal;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--primary-text-color);
   text-decoration: none;
   transition: 250ms var(--timing-function);
 }
@@ -651,15 +651,6 @@ img {
   justify-content: center;
 }
 
-.social__link {
-  width: 44px;
-  height: 44px;
-  background-color: #43444D;
-  border-radius: 50%;
-  padding: 12px;
-  transition: background-color 250ms var(--timing-function);
-}
-
 .social__item:not(:last-child) {
   margin-right: 10px;
 }
@@ -676,9 +667,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   background-color: var(--accent-color);
 }
 
@@ -725,7 +714,6 @@ img {
   color: #ffffff;
   letter-spacing: 0.06em;
 }
-
 .subscribe__text::after {
   content: url("../images/iconsend.svg");
   position: absolute;
@@ -784,14 +772,6 @@ img {
   transition: color 250ms var(--timing-function);
 }
 
-.modal__button-close:focus .modal__icon-close,
-.modal__button-close:hover .modal__icon-close,
-.modal__button-close:focus,
-.modal__button-close:hover {
-  fill: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
 .modal__icon-close {
   position: absolute;
   top: 66%;
@@ -800,11 +780,7 @@ img {
   fill: #000000;
   transition: fill 250ms var(--timing-function);
 }
-
-.modal__button-close:focus .modal__icon-close,
-.modal__button-close:hover .modal__icon-close,
-.modal__button-close:focus,
-.modal__button-close:hover {
+.modal__icon-close .modal__button-close:focus, .modal__button-close:hover .modal__icon-close {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -848,6 +824,9 @@ img {
   padding-left: 42px;
   transition: outline-color 250ms var(--timing-function);
 }
+.modal__input:focus {
+  outline-color: var(--accent-color);
+}
 
 .modal__icon {
   position: absolute;
@@ -860,12 +839,7 @@ img {
   fill: #212121;
   transition: fill 250ms var(--timing-function);
 }
-
-.modal__input:focus {
-  outline-color: var(--accent-color);
-}
-
-.modal__input:focus + .modal__icon {
+.modal__input:focus .modal__icon {
   fill: var(--accent-color);
 }
 
@@ -904,6 +878,14 @@ img {
   margin-right: 9px;
   fill: transparent;
 }
+.privacy__checkbox:checked .privacy span {
+  background-color: var(--accent-color);
+  border-color: transparent;
+  fill: #FFFFFF;
+}
+.privacy__checkbox:focus .privacy span {
+  border-color: var(--accent-color);
+}
 
 .privacy__button {
   display: block;
@@ -928,16 +910,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.privacy__checkbox:checked + .privacy span {
-  background-color: var(--accent-color);
-  border-color: transparent;
-  fill: #FFFFFF;
-}
-
-.privacy__checkbox:focus + .privacy span {
-  border-color: var(--accent-color);
 }
 
 .privacy__doc {

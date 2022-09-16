@@ -49,11 +49,16 @@
     transition: background-color 250ms var(--timing-function);
     border-radius: 10px;
   }
-  &:hover::after,
-  .current::after {
+  &:hover::after{
     width: 100%;
     opacity: 1;
   }}
+  
+  .current::after{ width: 100%;
+    opacity: 1;
+  }
+
+
   
   .contacts__link {
     display: block;

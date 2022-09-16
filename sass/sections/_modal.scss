@@ -42,13 +42,6 @@
     border-radius: 50%;
     transition: color 250ms var(--timing-function);
   }
-  .modal__button-close:focus .modal__icon-close,
-  .modal__button-close:hover .modal__icon-close,
-    .modal__button-close:focus,
-    .modal__button-close:hover {
-      fill: var(--accent-color);
-      border-color: var(--accent-color);
-    }
     
 .modal__icon-close {
     position: absolute;
@@ -56,15 +49,11 @@
     transform: translate(-50%, -50%);
     fill: #000000;
     transition: fill 250ms var(--timing-function);
-  }
-
-.modal__button-close:focus .modal__icon-close,
-.modal__button-close:hover .modal__icon-close,
   .modal__button-close:focus,
-  .modal__button-close:hover {
+  .modal__button-close:hover & {
     fill: var(--accent-color);
-    border-color: var(--accent-color);
-  }
+      border-color: var(--accent-color);
+  }}
   
   .modal__title {
     font-family: Roboto;
@@ -104,7 +93,9 @@
     font-size: 14px;
     padding-left: 42px; 
     transition: outline-color 250ms var(--timing-function);
-  }
+  &:focus {
+    outline-color: var(--accent-color) ;
+  }}
 
   .modal__icon {
     position: absolute;
@@ -116,15 +107,9 @@
     display: inline-block;
     fill: #212121;
     transition: fill 250ms var(--timing-function);
-  }
-
-  .modal__input:focus {
-    outline-color: var(--accent-color) ;
-  }
-
-  .modal__input:focus + .modal__icon {
+  .modal__input:focus & {
     fill: var(--accent-color);
-  }
+  }}
   
   .modal__text{
     width: 100%;
@@ -160,7 +145,14 @@
     border-radius: 3px;
     margin-right: 9px;
     fill: transparent;
-  }
+  .privacy__checkbox:checked & {
+      background-color: var(--accent-color);
+      border-color: transparent;
+      fill: #FFFFFF; 
+      }
+  .privacy__checkbox:focus & {
+        border-color: var(--accent-color);
+      }}
 
   .privacy__button {
     display: block;
@@ -187,15 +179,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .privacy__checkbox:checked + .privacy span {
-  background-color: var(--accent-color);
-  border-color: transparent;
-  fill: #FFFFFF; 
-  }
-  .privacy__checkbox:focus + .privacy span {
-    border-color: var(--accent-color);
   }
   
   .privacy__doc {

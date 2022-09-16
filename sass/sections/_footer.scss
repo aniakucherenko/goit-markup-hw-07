@@ -31,32 +31,35 @@
 .footer__list{
       display:block;
     } 
-    
-.social__link:hover,
-.social__link:focus {
+
+.social__link{
+      width: 44px;
+      height: 44px;
+      background-color: #43444D ;
+      border-radius: 50%;
+      padding: 12px;
+      transition: background-color 250ms var(--timing-function);
+    &:hover,
+    &:focus {
       color: var(--accent-color);
-    }
+    }}
 
 .contacts{ 
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: 250ms var(--timing-function);
-}
+&:hover,
+&:focus {
+   color: var(--accent-color);
+ }}
 
-.address {
-      color: var(--primary-text-color); }
-   .contacts:hover,
-   .contacts:focus {
-      color: var(--accent-color);
-    }
-
-    .address{
-      font-style: normal;
-      color: rgba(255, 255, 255, 0.6);
-      text-decoration: none;
-      transition: 250ms var(--timing-function);
-    }
+.address{
+    font-style: normal;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: 250ms var(--timing-function);
+  }
     
     .footer__item{
       margin-bottom: 9px;
@@ -75,42 +78,31 @@
     text-align: left;
     }
     
-    .social__list{
+  .social__list{
       display: flex;
       justify-content: center;
       }
-      
-    .social__link{
-      width: 44px;
-      height: 44px;
-      background-color: #43444D ;
-      border-radius: 50%;
-      padding: 12px;
-      transition: background-color 250ms var(--timing-function);
-      }
-    
-      .social__item:not(:last-child){
+
+ .social__item:not(:last-child){
       margin-right: 10px;
       }
 
-      .social__icon{
+  .social__icon{
       fill: white; 
       }
 
-      .social__link{
+  .social__link{
       width: 100%;
       height: 100%;
       color: black;
       display: flex;
       align-items: center;
       justify-content: center;
-      }
-
-      .social__link:hover,
-      .social__link:focus {
+     &:hover,
+     &:focus {
         background-color: var(--accent-color);
-      }
-    
+      }}
+
     /*---SUBSCRIBE--------------------------------*/
     
     .subscribe{
@@ -153,15 +145,14 @@
       line-height: 1.9;
       color: #ffffff;
       letter-spacing: 0.06em;
-    }
-    .subscribe__text::after {
+    &::after {
       content: url('../images/iconsend.svg');
       position: absolute;
       width: 24px; height: 24px;
       display: inline-block;
       margin-left: 10px;
       fill: #ffffff;
-    }
+    }}
     
     
     
