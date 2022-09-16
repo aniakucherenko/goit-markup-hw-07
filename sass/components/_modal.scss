@@ -33,7 +33,7 @@
     transform: translate(-50%, -50%) scale(0);
   }
 
-.modal__button-close {
+.modal__button--close {
     position: absolute;
     top: 8px; right: 8px;
     width: 30px; height: 30px;
@@ -43,14 +43,14 @@
     transition: color 250ms var(--timing-function);
   }
     
-.modal__icon-close {
+.modal__icon--close {
     position: absolute;
     top: 66%; left: 66%;
     transform: translate(-50%, -50%);
     fill: #000000;
     transition: fill 250ms var(--timing-function);
-  .modal__button-close:focus,
-  .modal__button-close:hover & {
+  .modal__button--close:focus,
+  .modal__button--close:hover & {
     fill: var(--accent-color);
       border-color: var(--accent-color);
   }}

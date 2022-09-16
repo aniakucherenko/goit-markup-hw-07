@@ -760,7 +760,7 @@ img {
   transform: translate(-50%, -50%) scale(0);
 }
 
-.modal__button-close {
+.modal__button--close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -772,7 +772,7 @@ img {
   transition: color 250ms var(--timing-function);
 }
 
-.modal__icon-close {
+.modal__icon--close {
   position: absolute;
   top: 66%;
   left: 66%;
@@ -780,7 +780,7 @@ img {
   fill: #000000;
   transition: fill 250ms var(--timing-function);
 }
-.modal__icon-close .modal__button-close:focus, .modal__button-close:hover .modal__icon-close {
+.modal__icon--close .modal__button--close:focus, .modal__button--close:hover .modal__icon--close {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
